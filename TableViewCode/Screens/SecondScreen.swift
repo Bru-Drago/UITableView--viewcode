@@ -65,6 +65,14 @@ extension SecondScreen:UITableViewDelegate,UITableViewDataSource{
         
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let listas = lista[indexPath.row]
+        let detailVC = DetailScreen()
+        detailVC.lista = listas
+        let navController = UINavigationController(rootViewController: detailVC)
+        present(navController, animated: true)
+        
+    }
     
     
 }
