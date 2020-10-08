@@ -34,7 +34,7 @@ class MainScreen: UIViewController {
     
     @objc func nextButtonTapped(){
         let nextScreen = SecondScreen()
-        nextScreen.title = "Second Screen"
+        nextScreen.title = "Lista de Contatos"
         navigationController?.pushViewController(nextScreen, animated: true)
         
     }

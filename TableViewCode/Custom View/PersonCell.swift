@@ -51,14 +51,6 @@ class PersonCell: UITableViewCell {
         
     }
 
-//    func setImgConstraints(){
-//        avatarImg.translatesAutoresizingMaskIntoConstraints = false
-//        avatarImg.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-//        avatarImg.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12).isActive = true
-//        avatarImg.heightAnchor.constraint(equalToConstant: 80).isActive = true
-//        avatarImg.widthAnchor.constraint(equalTo: avatarImg.heightAnchor, multiplier: 16/9).isActive = true
-//
-//    }
     func setLblConstraints(){
         nameTitleLbl.translatesAutoresizingMaskIntoConstraints = false
         nameTitleLbl.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
