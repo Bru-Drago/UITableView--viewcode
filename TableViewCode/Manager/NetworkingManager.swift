@@ -12,7 +12,8 @@ class NetworkingManager {
     static let shared = NetworkingManager()
     private init (){}
     
-    var baseURL = "https://reqres.in/api/users?page=2"
+    private var baseURL = "https://reqres.in/api/users?page=2"
+    let cache = NSCache<NSString,UIImage>()
     
     func getLista(completion: @escaping (ListaData?,String?)->()){
         

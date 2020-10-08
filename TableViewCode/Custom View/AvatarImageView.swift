@@ -9,6 +9,7 @@ import UIKit
 
 class AvatarImageView : UIImageView {
     
+    let cache = NetworkingManager.shared.cache
     let placeholderImage = UIImage(named: "avatar")!
     
     override init(frame: CGRect) {
@@ -27,6 +28,14 @@ class AvatarImageView : UIImageView {
         
     }
     func downloadImage(from urlString: String){
+        
+        //cache é uma NsString
+        let cacheKey = NSString(string:urlString)
+        if let image = cache.object(forKey: cacheKey){
+            self.image = image
+            return
+        }
+        
         guard let url = URL(string: urlString)else { return}
         
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -35,6 +44,7 @@ class AvatarImageView : UIImageView {
             guard let data = data else { return}
             
             guard let image = UIImage(data:data)else { return}
+            self.cache.setObject(image, forKey: cacheKey)
             
             DispatchQueue.main.async {
                 self.image = image

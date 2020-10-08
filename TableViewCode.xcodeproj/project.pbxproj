@@ -20,6 +20,7 @@
 		F5C5C4E2252E5C7A0026FD69 /* avatar1.png in Resources */ = {isa = PBXBuildFile; fileRef = F5C5C4E0252E5C790026FD69 /* avatar1.png */; };
 		F5C5C4E3252E5C7A0026FD69 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = F5C5C4E1252E5C7A0026FD69 /* avatar.png */; };
 		F5C5C4E7252F55E00026FD69 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C5C4E6252F55E00026FD69 /* AvatarImageView.swift */; };
+		F5C5C4EA252F6E2C0026FD69 /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C5C4E9252F6E2C0026FD69 /* DetailScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		F5C5C4E0252E5C790026FD69 /* avatar1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = avatar1.png; path = TableViewCode/avatar1.png; sourceTree = SOURCE_ROOT; };
 		F5C5C4E1252E5C7A0026FD69 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = avatar.png; path = TableViewCode/avatar.png; sourceTree = SOURCE_ROOT; };
 		F5C5C4E6252F55E00026FD69 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
+		F5C5C4E9252F6E2C0026FD69 /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				F511AEA5252E347C009BEE79 /* SecondScreen.swift */,
 				F511AE9F252E1165009BEE79 /* MainScreen.swift */,
+				F5C5C4E9252F6E2C0026FD69 /* DetailScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5C5C4EA252F6E2C0026FD69 /* DetailScreen.swift in Sources */,
 				F5C5C4E7252F55E00026FD69 /* AvatarImageView.swift in Sources */,
 				F511AEB0252E3B8D009BEE79 /* PersonCell.swift in Sources */,
 				F511AEA0252E1165009BEE79 /* MainScreen.swift in Sources */,
