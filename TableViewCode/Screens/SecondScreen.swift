@@ -10,12 +10,15 @@ import UIKit
 class SecondScreen: UIViewController {
     
     var tableView = UITableView()
+    var lista : [Data] = []
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .darkGray
         configureTableView()
+        callGetLista()
     }
     
     func configureTableView(){
@@ -26,6 +29,8 @@ class SecondScreen: UIViewController {
         tableView.rowHeight = 100
         //4 - Set constraints
         tableView.pin(to: view)
+        tableView.backgroundColor = .systemBackground
+        tableView.register(PersonCell.self, forCellReuseIdentifier: PersonCell.reuseID)
         
     }
     func setTableViewDelegates(){
@@ -33,15 +38,32 @@ class SecondScreen: UIViewController {
         tableView.dataSource = self
     }
 
+    func callGetLista(){
+        NetworkingManager.shared.getLista { (lista, erroMsg) in
+            guard let lista = lista?.data else {
+                print("Erro na call")
+                return
+            }
+            //(lista 1 é a var = lista do guard)fazendo o append do resultado no array
+            self.lista = lista
+            print(lista)
+        }
+    }
+
 
 }
 extension SecondScreen:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return lista.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: PersonCell.reuseID, for: indexPath)as! PersonCell
+        let listas = lista[indexPath.row]
+        cell.set(lista: listas)
+        
+        return cell
     }
     
     

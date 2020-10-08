@@ -15,6 +15,11 @@
 		F511AEA6252E347C009BEE79 /* SecondScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511AEA5252E347C009BEE79 /* SecondScreen.swift */; };
 		F511AEA9252E384F009BEE79 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511AEA8252E384F009BEE79 /* UIView+Extension.swift */; };
 		F511AEB0252E3B8D009BEE79 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511AEAF252E3B8D009BEE79 /* PersonCell.swift */; };
+		F511AEB3252E4B83009BEE79 /* ListaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511AEB2252E4B83009BEE79 /* ListaData.swift */; };
+		F511AEB6252E4C31009BEE79 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F511AEB5252E4C31009BEE79 /* NetworkingManager.swift */; };
+		F5C5C4E2252E5C7A0026FD69 /* avatar1.png in Resources */ = {isa = PBXBuildFile; fileRef = F5C5C4E0252E5C790026FD69 /* avatar1.png */; };
+		F5C5C4E3252E5C7A0026FD69 /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = F5C5C4E1252E5C7A0026FD69 /* avatar.png */; };
+		F5C5C4E7252F55E00026FD69 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C5C4E6252F55E00026FD69 /* AvatarImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		F511AEA5252E347C009BEE79 /* SecondScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreen.swift; sourceTree = "<group>"; };
 		F511AEA8252E384F009BEE79 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		F511AEAF252E3B8D009BEE79 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		F511AEB2252E4B83009BEE79 /* ListaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaData.swift; sourceTree = "<group>"; };
+		F511AEB5252E4C31009BEE79 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		F5C5C4E0252E5C790026FD69 /* avatar1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = avatar1.png; path = TableViewCode/avatar1.png; sourceTree = SOURCE_ROOT; };
+		F5C5C4E1252E5C7A0026FD69 /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = avatar.png; path = TableViewCode/avatar.png; sourceTree = SOURCE_ROOT; };
+		F5C5C4E6252F55E00026FD69 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,8 @@
 		F511AE87252E0DE3009BEE79 /* TableViewCode */ = {
 			isa = PBXGroup;
 			children = (
+				F5C5C4E5252F557F0026FD69 /* Custom View */,
+				F511AEB8252E4C39009BEE79 /* Manager */,
 				F511AEAE252E3B37009BEE79 /* Model */,
 				F511AEAD252E3B1A009BEE79 /* Extensions */,
 				F511AEAC252E3AE1009BEE79 /* Screens */,
@@ -74,6 +86,8 @@
 			children = (
 				F511AE93252E0DEE009BEE79 /* LaunchScreen.storyboard */,
 				F511AE91252E0DEE009BEE79 /* Assets.xcassets */,
+				F5C5C4E1252E5C7A0026FD69 /* avatar.png */,
+				F5C5C4E0252E5C790026FD69 /* avatar1.png */,
 				F511AE8A252E0DE3009BEE79 /* SceneDelegate.swift */,
 				F511AE88252E0DE3009BEE79 /* AppDelegate.swift */,
 			);
@@ -100,9 +114,26 @@
 		F511AEAE252E3B37009BEE79 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				F511AEAF252E3B8D009BEE79 /* PersonCell.swift */,
+				F511AEB2252E4B83009BEE79 /* ListaData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F511AEB8252E4C39009BEE79 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F511AEB5252E4C31009BEE79 /* NetworkingManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		F5C5C4E5252F557F0026FD69 /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+				F511AEAF252E3B8D009BEE79 /* PersonCell.swift */,
+				F5C5C4E6252F55E00026FD69 /* AvatarImageView.swift */,
+			);
+			path = "Custom View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,8 +193,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5C5C4E3252E5C7A0026FD69 /* avatar.png in Resources */,
 				F511AE95252E0DEE009BEE79 /* LaunchScreen.storyboard in Resources */,
 				F511AE92252E0DEE009BEE79 /* Assets.xcassets in Resources */,
+				F5C5C4E2252E5C7A0026FD69 /* avatar1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,10 +207,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5C5C4E7252F55E00026FD69 /* AvatarImageView.swift in Sources */,
 				F511AEB0252E3B8D009BEE79 /* PersonCell.swift in Sources */,
 				F511AEA0252E1165009BEE79 /* MainScreen.swift in Sources */,
+				F511AEB3252E4B83009BEE79 /* ListaData.swift in Sources */,
 				F511AEA6252E347C009BEE79 /* SecondScreen.swift in Sources */,
 				F511AE89252E0DE3009BEE79 /* AppDelegate.swift in Sources */,
+				F511AEB6252E4C31009BEE79 /* NetworkingManager.swift in Sources */,
 				F511AEA9252E384F009BEE79 /* UIView+Extension.swift in Sources */,
 				F511AE8B252E0DE3009BEE79 /* SceneDelegate.swift in Sources */,
 			);
